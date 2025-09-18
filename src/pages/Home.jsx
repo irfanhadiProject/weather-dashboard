@@ -1,5 +1,5 @@
 import WeatherCard from '../components/WeatherCard';
-import SearchBar from '../components/searchbar';
+import SearchBar from '../components/SearchBar';
 
 function Home() {
   return (
