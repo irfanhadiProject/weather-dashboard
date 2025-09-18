@@ -3,6 +3,7 @@ import { Link, Outlet } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import Button from './Button';
+import logo from '../assets/logo.png';
 
 function AppLayout() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,9 +20,16 @@ function AppLayout() {
   return (
     <div className="flex flex-col h-full items-center gap-6">
       <div className="flex flex-col w-full items-center">
-        <header className="flex justify-between items-center w-11/12 max-w-[1024px] p-4 text-[var(--accent)] ">
+        <header className="flex justify-between items-center w-11/12 max-w-[1024px] py-4 px-2 text-[var(--accent)] ">
           <Link to="/">
-            <span className="text-lg font-extrabold md:text-3xl">Weather</span>
+            <span className="text-lg font-extrabold md:text-3xl">
+              <img
+                src={logo}
+                alt="Weather logo"
+                className="h-8 inline-block px-2"
+              />
+              Weather
+            </span>
           </Link>
 
           <nav className="hidden md:block">
