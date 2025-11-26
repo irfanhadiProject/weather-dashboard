@@ -1,7 +1,7 @@
-import { configureStore } from '@reduxjs/toolkit';
-import weatherReducer from './slices/weatherSlice';
-import favoritesReducer from './slices/favoritesSlice';
-import tempUnitReducer from './slices/tempUnitSlice';
+import { configureStore } from '@reduxjs/toolkit'
+import weatherReducer from './slices/weatherSlice'
+import favoritesReducer from './slices/favoritesSlice'
+import tempUnitReducer from './slices/tempUnitSlice'
 
 export const store = configureStore({
   reducer: {
@@ -9,11 +9,11 @@ export const store = configureStore({
     favorites: favoritesReducer,
     tempUnit: tempUnitReducer,
   },
-});
+})
 
 store.subscribe(() => {
   localStorage.setItem(
     'favorites',
     JSON.stringify(store.getState().favorites.list)
-  );
-});
+  )
+})

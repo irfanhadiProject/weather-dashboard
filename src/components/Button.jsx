@@ -6,7 +6,7 @@ function Button({
   ...props
 }) {
   const baseStyle =
-    'rounded-lg border text-sm font-medium font-inherit cursor-pointer transition-colors duration-200';
+    'rounded-lg border text-sm font-medium font-inherit cursor-pointer transition-colors duration-200'
 
   const styles = {
     default:
@@ -21,13 +21,13 @@ function Button({
       'bg-transparent text-[var(--subtext)] border-transparent hover:text-[var(--accent)]',
 
     icon: 'p-2 rounded-lg border border-transparent bg-transparent hover:bg-[var(--surface-hover)]',
-  };
+  }
 
   const sizes = {
     sm: 'px-2 py-1 text-xs',
     md: 'px-3 py-1.5 text-sm',
     lg: 'px-4 py-2 text-base',
-  };
+  }
 
   return (
     <button
@@ -38,7 +38,7 @@ function Button({
     >
       {children}
     </button>
-  );
+  )
 }
 
-export default Button;
+export default Button

@@ -1,21 +1,21 @@
-import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { convertTemp } from '../utils/convertTemp';
-import ErrorMessage from './ErrorMessage';
-import Spinner from './Spinner';
-import useFavorites from '../hooks/useFavorites';
-import Button from './Button';
-import TempToggle from './TempToggle';
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { convertTemp } from '../utils/convertTemp'
+import ErrorMessage from './ErrorMessage'
+import Spinner from './Spinner'
+import useFavorites from '../hooks/useFavorites'
+import Button from './Button'
+import TempToggle from './TempToggle'
 
 function WeatherCard() {
-  const { data, dataStatus, error } = useSelector((state) => state.weather);
-  const { isFavorite, toggleFavorite } = useFavorites(data);
-  const unit = useSelector((state) => state.tempUnit.unit);
+  const { data, dataStatus, error } = useSelector((state) => state.weather)
+  const { isFavorite, toggleFavorite } = useFavorites(data)
+  const unit = useSelector((state) => state.tempUnit.unit)
 
   function degToCompass(deg) {
-    const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
-    const index = Math.round(deg / 45) % 8;
-    return directions[index];
+    const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW']
+    const index = Math.round(deg / 45) % 8
+    return directions[index]
   }
 
   return (
@@ -64,7 +64,7 @@ function WeatherCard() {
         </div>
       )}
     </div>
-  );
+  )
 }
 
-export default WeatherCard;
+export default WeatherCard

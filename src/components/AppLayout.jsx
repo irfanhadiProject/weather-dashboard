@@ -1,21 +1,21 @@
-import { useEffect, useState } from 'react';
-import { Link, Outlet } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
-import Button from './Button';
-import logo from '../assets/logo.png';
+import { useEffect, useState } from 'react'
+import { Link, Outlet } from 'react-router-dom'
+import { Menu, X } from 'lucide-react'
+import ThemeToggle from './ThemeToggle'
+import Button from './Button'
+import logo from '../assets/logo.png'
 
 function AppLayout() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [time, setTime] = useState(new Date());
+  const [isOpen, setIsOpen] = useState(false)
+  const [time, setTime] = useState(new Date())
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTime(new Date());
-    }, 1000);
+      setTime(new Date())
+    }, 1000)
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <div className="flex flex-col h-full items-center gap-6">
@@ -105,7 +105,7 @@ function AppLayout() {
         <p>© 2025 Irfan Hadi</p>
       </footer>
     </div>
-  );
+  )
 }
 
-export default AppLayout;
+export default AppLayout

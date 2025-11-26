@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useParams } from 'react-router-dom'
 import {
   CartesianGrid,
   Line,
@@ -9,33 +9,33 @@ import {
   Tooltip,
   XAxis,
   YAxis,
-} from 'recharts';
-import { getForecast, getWeather } from '../store/slices/weatherSlice';
-import ErrorMessage from './ErrorMessage';
-import Spinner from './Spinner';
+} from 'recharts'
+import { getForecast, getWeather } from '../store/slices/weatherSlice'
+import ErrorMessage from './ErrorMessage'
+import Spinner from './Spinner'
 
 function WeatherDetails() {
-  const { city } = useParams();
-  const dispatch = useDispatch();
+  const { city } = useParams()
+  const dispatch = useDispatch()
   const { data, forecast, dataStatus, forecastStatus, error } = useSelector(
     (state) => state.weather
-  );
+  )
 
   useEffect(() => {
     if (city) {
-      dispatch(getWeather(city));
-      dispatch(getForecast(city));
+      dispatch(getWeather(city))
+      dispatch(getForecast(city))
     }
-  }, [city, dispatch]);
+  }, [city, dispatch])
 
   if (dataStatus === 'loading' || forecastStatus === 'loading')
-    return <Spinner />;
+    return <Spinner />
   if (error)
     return (
       <div className="flex items-center justify-center">
         <ErrorMessage message={error} />
       </div>
-    );
+    )
 
   return (
     <div>
@@ -93,7 +93,7 @@ function WeatherDetails() {
         </div>
       )}
     </div>
-  );
+  )
 }
 
-export default WeatherDetails;
+export default WeatherDetails

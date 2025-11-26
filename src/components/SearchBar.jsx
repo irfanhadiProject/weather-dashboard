@@ -1,16 +1,16 @@
-import { useDispatch } from 'react-redux';
-import { getWeather } from '../store/slices/weatherSlice';
-import { useState } from 'react';
-import Button from './Button';
+import { useDispatch } from 'react-redux'
+import { getWeather } from '../store/slices/weatherSlice'
+import { useState } from 'react'
+import Button from './Button'
 
 function SearchBar() {
-  const [city, setCity] = useState('');
-  const dispatch = useDispatch();
+  const [city, setCity] = useState('')
+  const dispatch = useDispatch()
 
   function handleSubmit(e) {
-    e.preventDefault();
+    e.preventDefault()
     if (city.trim() != '') {
-      dispatch(getWeather(city));
+      dispatch(getWeather(city))
     }
   }
   return (
@@ -35,7 +35,7 @@ function SearchBar() {
         </Button>
       </form>
     </div>
-  );
+  )
 }
 
-export default SearchBar;
+export default SearchBar

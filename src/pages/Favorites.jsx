@@ -1,15 +1,15 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { removeFavorite } from '../store/slices/favoritesSlice';
-import { Link } from 'react-router-dom';
-import ErrorMessage from '../components/ErrorMessage';
-import Button from '../components/Button';
+import { useDispatch, useSelector } from 'react-redux'
+import { removeFavorite } from '../store/slices/favoritesSlice'
+import { Link } from 'react-router-dom'
+import ErrorMessage from '../components/ErrorMessage'
+import Button from '../components/Button'
 
 function Favorites() {
-  const dispatch = useDispatch();
-  const favorites = useSelector((state) => state.favorites.list);
+  const dispatch = useDispatch()
+  const favorites = useSelector((state) => state.favorites.list)
 
   function handleDeleteFavorite(id) {
-    dispatch(removeFavorite(id));
+    dispatch(removeFavorite(id))
   }
   return (
     <div className="flex flex-col w-full items-center gap-4">
@@ -56,7 +56,7 @@ function Favorites() {
           ))
       )}
     </div>
-  );
+  )
 }
 
-export default Favorites;
+export default Favorites

@@ -1,5 +1,5 @@
-import WeatherCard from '../components/WeatherCard';
-import SearchBar from '../components/SearchBar';
+import WeatherCard from '../components/WeatherCard'
+import SearchBar from '../components/SearchBar'
 
 function Home() {
   return (
@@ -7,7 +7,7 @@ function Home() {
       <SearchBar />
       <WeatherCard />
     </div>
-  );
+  )
 }
 
-export default Home;
+export default Home

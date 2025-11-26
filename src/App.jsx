@@ -1,8 +1,8 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import AppLayout from './components/AppLayout';
-import Home from './pages/Home';
-import Favorites from './pages/Favorites';
-import WeatherDetails from './components/WeatherDetails';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import AppLayout from './components/AppLayout'
+import Home from './pages/Home'
+import Favorites from './pages/Favorites'
+import WeatherDetails from './components/WeatherDetails'
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App
